@@ -93,7 +93,7 @@ def hello():
 async def autocomplete(
     query: str,
     limit: int = 5,
-    # user: dict = Depends(verify_firebase_token),
+    user: dict = Depends(verify_firebase_token),
     db: AsyncSession = Depends(get_db)
 ):
     q = query.lower()
