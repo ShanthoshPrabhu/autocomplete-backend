@@ -8,7 +8,7 @@ build/
 dist/
 
 .env
-.venv
+.venv/
 env/
 venv/
 ENV/
@@ -16,8 +16,18 @@ env.bak/
 venv.bak/
 
 .vscode/
-
 .DS_Store
 Thumbs.db
 
 Dockerfile
+
+*.db
+
+alembic/versions/
+
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*.swn
