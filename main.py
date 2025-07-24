@@ -91,9 +91,9 @@ def autocomplete(query: str, limit: int = 5, user: dict = Depends(verify_firebas
         
         for word in words:
             word_lower = word.lower()
-            if word_lower.startswith(q):
+            if word_lower.startswith(q) and word_lower != q:
                 starts_with.append(word)
-            elif q in word_lower:
+            elif q in word_lower and word_lower != q:
                 contains.append(word)
                 
             if len(starts_with) >= limit:
